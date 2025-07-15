@@ -8,15 +8,13 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v4
 
-      - name: Setup C++ and CMake
+      - name: Setup C++ tool-chain
         uses: aminya/setup-cpp@v0.34.0
         with:
-          compiler: llvm
-          llvm-version: "15"
+          compiler: llvm-15 # <-- give version here
           cmake: true
           ninja: true
 
