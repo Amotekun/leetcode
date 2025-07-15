@@ -2,7 +2,7 @@
 
 #include <vector>
 
-#include "../../solutions/trees/94_binary_tree_inorder_traversal_recursive.cpp"
+#include "../../solutions/trees/94_binary_tree_inorder_traversal.cpp"
 #include "treenode.hpp"
 
 TEST(InorderTraversalTest, BasicCase) {

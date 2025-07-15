@@ -1,5 +1,5 @@
 add_library(tree_solutions
-    94_binary_tree_inorder_traversal_recursive.cpp
+    94_binary_tree_inorder_traversal.cpp
 )
 
 # << this line makes the header visible >>
