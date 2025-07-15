@@ -1,0 +1,11 @@
+name: clang-format
+on: [pull_request]
+jobs:
+  style:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: jidicula/clang-format-action@v4.11.0 # Fails PR if mismatch :contentReference[oaicite:1]{index=1}
+        with:
+          clang-format-version: "18"
+          check-path: "solutions"
