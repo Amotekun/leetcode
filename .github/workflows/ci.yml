@@ -1,20 +1,29 @@
 name: build-and-test
+
 on:
   push:
-    branches: [main, dev, feature/**]
+    branches: [main]
   pull_request:
+
 jobs:
-  ubunti-clang:
+  build:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: action/checkout@v4
-      - uses: aminya/setup-cpp@v3
+      - uses: actions/checkout@v4
+
+      - name: Setup C++ and CMake
+        uses: aminya/setup-cpp@v2
         with:
-          complier: clang
-          version: latest
-      - name: configure
-        run: cmake -B build -DCMAKE_CXX_STANDARD=23 -DMAKE_BUILD_TYPE=Release
-      - name: build
-        run: cmake --build build -j 4
-      - name: test
+          compiler: clang
+          cmake: true
+          ninja: true
+
+      - name: Configure
+        run: cmake -B build -DCMAKE_CXX_STANDARD=23 -DCMAKE_BUILD_TYPE=Release
+
+      - name: Build
+        run: cmake --build build
+
+      - name: Test
         run: ctest --test-dir build --output-on-failure
