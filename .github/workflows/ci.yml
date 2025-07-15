@@ -15,7 +15,8 @@ jobs:
       - name: Setup C++ and CMake
         uses: aminya/setup-cpp@v0.34.0
         with:
-          compiler: clang
+          compiler: llvm
+          llvm-version: "15"
           cmake: true
           ninja: true
 
