@@ -1,13 +1,20 @@
-#First test: Inorder Traversal (94)
+# Include GoogleTest macros first (REQUIRED)
+include(GoogleTest)
+
+# First test: Inorder Traversal (94)
 add_executable(test_inorder test_94_inorder.cpp)
 target_link_libraries(test_inorder gtest_main tree_solutions)
 target_include_directories(test_inorder PRIVATE ${CMAKE_SOURCE_DIR}/utils)
+gtest_discover_tests(test_inorder)
 
-#Second test: Same Tree (100)
+# Second test: Same Tree (100)
 add_executable(test_same_tree test_100_same_tree.cpp)
 target_link_libraries(test_same_tree gtest_main tree_solutions)
 target_include_directories(test_same_tree PRIVATE ${CMAKE_SOURCE_DIR}/utils)
+gtest_discover_tests(test_same_tree)
 
-# Enable test discovery for both
-include(GoogleTest)
-gtest_discover_tests(test_inorder)
+# Third test: Symmetric tree (101)
+add_executable(test_symmetric_tree test_101_symmetric_tree.cpp)
+target_link_libraries(test_symmetric_tree gtest_main tree_solutions)
+target_include_directories(test_symmetric_tree PRIVATE ${CMAKE_SOURCE_DIR}/utils)
+gtest_discover_tests(test_symmetric_tree)
