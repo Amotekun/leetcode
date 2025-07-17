@@ -1,6 +1,6 @@
 #include <gtest/gtest.h>
 #include "../../solutions/trees/101_symmetric_tree.cpp"
-#include "treeNode.hpp"
+#include "treenode.hpp"
 
 TEST(SymmetricTreeTest, SymmetricTree) {
     TreeNode* left = new TreeNode(2, new TreeNode(3), new TreeNode(4));
