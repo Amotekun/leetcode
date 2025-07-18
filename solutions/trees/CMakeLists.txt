@@ -1,7 +1,8 @@
 add_library(tree_solutions
     94_binary_tree_inorder_traversal.cpp
     100_same_tree.cpp
-    101_symmetric_tree
+    101_symmetric_tree.cpp
+    104_maximum_depth_of_binary_tree.cpp
 
 )
 
