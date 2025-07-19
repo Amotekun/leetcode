@@ -24,3 +24,10 @@ add_executable(test_max_depth test_104_max_depth.cpp)
 target_link_libraries(test_max_depth gtest_main tree_solutions)
 target_include_directories(test_max_depth PRIVATE ${CMAKE_SOURCE_DIR}/utils)
 gtest_discover_tests(test_max_depth)
+
+# Fifth test: Sorted Array to BST (108)
+add_executable(test_sorted_array_to_bst test_108_sorted_array_to_bst.cpp)
+target_link_libraries(test_sorted_array_to_bst gtest_main tree_solutions)
+target_include_directories(test_sorted_array_to_bst PRIVATE ${CMAKE_SOURCE_DIR}/utils)
+gtest_discover_tests(test_sorted_array_to_bst)
+
